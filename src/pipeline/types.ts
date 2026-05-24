@@ -9,6 +9,7 @@ import type { CannyOptions } from "../operations/canny.js";
 import type { ConvertOptions } from "../operations/convert.js";
 import type { DilateOptions } from "../operations/dilate.js";
 import type { ErodeOptions } from "../operations/erode.js";
+import type { EqualizeOptions } from "../operations/equalize.js";
 import type { GrayscaleOptions } from "../operations/grayscale.js";
 import type { InvertOptions } from "../operations/invert.js";
 import type { MorphologicalGradientOptions } from "../operations/morphological-gradient.js";
@@ -74,6 +75,8 @@ export interface RegisteredOperations {
   convert: ConvertOptions;
   /** Morphological dilation. See {@link DilateOptions}. */
   dilate: DilateOptions;
+  /** Histogram equalisation (CLAHE or global). See {@link EqualizeOptions}. */
+  equalize: EqualizeOptions;
   /** Morphological erosion. See {@link ErodeOptions}. */
   erode: ErodeOptions;
   /** Convert to grayscale via `COLOR_RGBA2GRAY`. See {@link GrayscaleOptions}. */
